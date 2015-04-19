@@ -6,6 +6,8 @@ Created on Sun Apr 19 18:49:37 2015
 """
 
 import numpy as np
+from sklearn.neighbors import KNeighborsClassifier
+
 
 '''
 -----------------------
@@ -24,13 +26,25 @@ def itakuraSaitoMetric(x,y):
     ii = ii + 1
     return np.sum(np.nan_to_num((x/y)-np.log(x/y)-1))
 
+# Model construction
+def trainModel(X_train,y_train,neighbors=5):
+    global ii
+    ii = 0
+    X2 = np.array([amplitudeVector(x[::60]) for x in X_train])
+    model = KNeighborsClassifier(n_neighbors=neighbors, algorithm='ball_tree',metric='pyfunc', func=itakuraSaitoMetric).fit(X2,y_train)
+    return model
+
+def predict(knn,X_test):
+    global ii
+    ii = 0
+    X3 = np.array([amplitudeVector(x[::60]) for x in X_test])
+    pred = knn.predict(X3)
+    return pred    
+
 # TEST    
 '''
 dataset = loadData()
-X2 = np.array([amplitudeVector(x[::60]) for x in dataset['X_train']])
-knn = KNeighborsClassifier(n_neighbors=5, algorithm='ball_tree',metric='pyfunc', func=itakuraSaitoMetric)
-knn.fit(X2,dataset['y_train'])
-X3 = np.array([amplitudeVector(xx[::60]) for xx in dataset['X_test']])
-pred = knn.predict(X3)
+knn = trainModel(dataset['X_train'],dataset['y_train'])
+res = predict(knn,dataset['X_test'])
 '''  
     
