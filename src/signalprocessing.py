@@ -17,7 +17,7 @@ import pywt
 -----------------------
 '''
 def pyeegSignal(X,fs=200,bb=[0.5,4,7,12,30]):
-    return bin_power(X,Band=bb,Fs=fs)[1] 
+    return bin_power(X,Band=bb,Fs=fs)
 
 '''
 -------------------------

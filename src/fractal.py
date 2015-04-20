@@ -14,7 +14,7 @@ from pyeeg import *
 - pr : bin_power(X,Band=bb,Fs=fs)[1] 
 -----------------------
 '''
-def pyeegFractal(X,fs=200,tau=4,dim=10,bb = [0.5,4,7,12,30],pr):
+def pyeegFractal(X,fs=200,tau=4,dim=10,bb=[0.5,4,7,12,30],pr=list()):
     fod = first_order_diff(X)  
     r1 = pfd(X, D=fod)
     r2 = hfd(X, Kmax=5)
@@ -23,8 +23,7 @@ def pyeegFractal(X,fs=200,tau=4,dim=10,bb = [0.5,4,7,12,30],pr):
     r5 = svd_entropy(X, Tau=4, DE=dim)
     r6 = fisher_info(X, Tau=4, DE=dim)
     r7 = dfa(X)
-    r8 = spectral_entropy(X, Band=bb, Fs=fs, Power_Ratio=pr)
-    return pr,r1,r2,r3,r4,r5,r6,r7,r8
+    return r1,r2,r3,r4,r5,r6,r7
 
 
 '''
