@@ -39,7 +39,6 @@ svc = models[len(listModels)-1].fit(Xarr_norm,labels)
 # Test dictionary construction
 d_test = dictionaryInitialization()
 d_test = dico_construction(dataset['X_test'],d_test)
-labels_t = np.array(dataset['y_test'])
 Xarr_norm_t = createNormalizedDataframe(d_test)
 
 # Prdecition of the model
