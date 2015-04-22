@@ -28,7 +28,7 @@ def listModels():
     models.append(RandomForestClassifier())
     models.append(LDA())
     models.append(DecisionTreeClassifier())
-    models.append(SVC())
+    models.append(SVC(kernel='linear'))
     return models
 
 '''

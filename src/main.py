@@ -11,8 +11,10 @@ from data import loadData
 from featureConstruction import dictionaryInitialization,dico_construction
 from models import listModels,createNormalizedDataframe,savePredictions
 
+mat_file = 'data_challenge.mat'
+
 # Load datas
-dataset = loadData()
+dataset = loadData(mat_file)
 
 # Train dictionary construction
 d_train = dictionaryInitialization()
