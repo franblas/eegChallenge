@@ -3,7 +3,7 @@ Prediction of sleep state using EEG data and model prediction
 
 ![neuraleeg](doc/Pictures/neuraleeg.png)
 
-## Docuementation
+## Documentation
 [Here](doc/EEG_Rapport.pdf) you can find explanations about how features are built and 
 models used to predict sleep states.
 
