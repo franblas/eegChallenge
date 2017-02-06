@@ -8,12 +8,19 @@ Prediction of sleep state using EEG data and model prediction
 models used to predict sleep states.
 
 ## Requirements
+- Python 2.7 + [pip](https://pip.pypa.io/en/stable/installing/) 
+
 - Python packages : numpy, scipy, scikit-learn, pandas, pywavelet  
 - Numpy : [http://www.numpy.org/](http://www.numpy.org/)
 - Scipy : [http://www.scipy.org/](http://www.scipy.org/)
 - Scikit-learn : [http://scikit-learn.org/stable/](http://scikit-learn.org/stable/)
 - Pandas : [http://pandas.pydata.org/](http://pandas.pydata.org/)
 - pyWavelet : [http://pywavelets.readthedocs.org/en/latest/](http://pywavelets.readthedocs.org/en/latest/)
+
+You can install them by typing:
+```
+pip install -r requirements.txt
+```
 
 ## Run the code
 Step 1 : Open the file main.py  
