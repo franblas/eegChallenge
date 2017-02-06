@@ -4,7 +4,7 @@ Prediction of sleep state using EEG data and model prediction
 ![neuraleeg](doc/Pictures/neuraleeg.png)
 
 ## Documentation
-[Here](doc/EEG_Rapport.pdf) you can find explanations about how features are built and 
+[Here](doc/EEG_Rapport.pdf) you can find explanations about how features are built and
 models used to predict sleep states.
 
 ## Requirements
@@ -17,11 +17,10 @@ models used to predict sleep states.
 
 ## Run the code
 Step 1 : Open the file main.py  
-Step 2 : Check that mat_file point to the challenge data file  
-Step 3 : Save and run the file : 
+Step 2 : Check that mat_file point to the challenge data file. Data can be found into the `data` folder, just unzip it (about 500Mb).  
+Step 3 : Save and run the file :
 ```
 python main
 ```  
-The process is quite slow, so be patient. If everything is okay, the result file 
-show up as ```pred_res.txt``` next to the main. 
-
+The process is quite slow, so be patient. If everything is okay, the result file
+show up as ```pred_res.txt``` next to the main.
